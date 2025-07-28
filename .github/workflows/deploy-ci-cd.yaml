@@ -1,4 +1,4 @@
-name: Deploy openai-gpt3
+name: deploy
 
 on:
   push:
