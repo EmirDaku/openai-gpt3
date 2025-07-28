@@ -19,7 +19,7 @@ jobs:
         node-version: '18'
 
     - name: Install dependencies and build React app
-      working-directory: ./frontend
+      
       run: |
         npm install
         npm run build
@@ -36,7 +36,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: ./frontend
-        file: ./frontend/Dockerfile
+        context: .
+        file: ./Dockerfile
         push: true
         tags: emirii1510/openai-gpt3
